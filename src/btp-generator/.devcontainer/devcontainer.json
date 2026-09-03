@@ -1,0 +1,11 @@
+{
+	"name": "SAP BTP Generator",
+	"image": "mcr.microsoft.com/devcontainers/base:debian",
+	"features": {
+		"ghcr.io/devcontainers/features/node:2": {
+			"version": "lts"
+		},
+		"ghcr.io/cbs-group/container-features/cap-dev-stack:1": {}
+	},
+	"postCreateCommand": "npm install -g yo @cbs-consulting/generator-btp && yo @cbs-consulting/btp && echo '✅ Setup complete. Run \"Dev Containers: Rebuild Container\" in the command palette now to switch to your project environment.'"
+}

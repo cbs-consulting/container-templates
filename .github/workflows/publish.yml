@@ -1,0 +1,42 @@
+# Tests and publishes Dev Container Templates to the GitHub Container Registry (GHCR)
+# on every push to main.
+#
+# No secrets to configure — the built-in GITHUB_TOKEN is used for authentication.
+# After the first publish, make the packages public in:
+#   https://github.com/orgs/cbs-Group/packages → Package settings → Change visibility → Public
+
+name: Publish Dev Container Templates
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish to GHCR
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install @devcontainers/cli
+        run: npm install -g @devcontainers/cli
+
+      - name: Log in to GHCR
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+      - name: Publish templates
+        run: |
+          devcontainer templates publish \
+            --registry ghcr.io \
+            --namespace cbs-group/container-templates \
+            ./src
