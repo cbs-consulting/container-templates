@@ -1,10 +1,5 @@
 # Tests and publishes Dev Container Templates to the GitHub Container Registry (GHCR)
 # on every push to main.
-#
-# No secrets to configure — the built-in GITHUB_TOKEN is used for authentication.
-# After the first publish, make the packages public in:
-#   https://github.com/orgs/cbs-Group/packages?repo_name=container-templates
-#   Package settings → Change visibility → Public
 
 name: Publish Dev Container Templates
 
@@ -42,5 +37,5 @@ jobs:
         run: |
           devcontainer templates publish \
             --registry ghcr.io \
-            --namespace cbs-group/container-templates \
+            --namespace cbs-consulting/container-templates \
             ./src

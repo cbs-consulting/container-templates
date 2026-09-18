@@ -1,6 +1,6 @@
 # container-templates
 
-Dev Container Templates published to GHCR at `ghcr.io/cbs-group/container-templates`.
+Dev Container Templates published to GHCR at `ghcr.io/cbs-consulting/container-templates`.
 
 ## Templates
 
@@ -10,7 +10,7 @@ Dev Container Templates published to GHCR at `ghcr.io/cbs-group/container-templa
 
 ## Usage
 
-In VS Code: **Command Palette → Dev Containers: Add Dev Container Configuration Files** and search for templates from `ghcr.io/cbs-group/container-templates`.
+In VS Code: **Command Palette → Dev Containers: Add Dev Container Configuration Files** and search for templates from `ghcr.io/cbs-consulting/container-templates`.
 
 Or reference directly in an empty project's `.devcontainer/devcontainer.json`:
 
