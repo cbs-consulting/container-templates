@@ -61,6 +61,8 @@ When the generator finishes, your project already contains its own `devcontainer
 
 Templates live in `src/<template>/` and contain a `devcontainer-template.json` plus a `.devcontainer/` folder. Test a Template locally with `devcontainer templates apply` against a temporary folder.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose a change, and follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](SECURITY.md).
+
 ## 📄 License
 
 Copyright © 2026 cbs Corporate Business Solutions Unternehmensberatung GmbH.

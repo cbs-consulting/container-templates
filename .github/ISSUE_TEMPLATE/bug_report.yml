@@ -1,0 +1,51 @@
+name: Bug report
+description: A Template does not apply, build or start as expected.
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How you applied the Template (VS Code, Dev Container CLI or copied manually) and the options you chose.
+      placeholder: |
+        1. devcontainer templates apply --template-id ghcr.io/cbs-consulting/container-templates/btp-generator --workspace-folder .
+        2. devcontainer up --workspace-folder .
+    validations:
+      required: true
+  - type: dropdown
+    id: template
+    attributes:
+      label: Template
+      options:
+        - btp-generator
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Template version
+      description: The version tag you applied, or the `version` in the Template's `devcontainer-template.json`.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, container runtime and how you open the container (VS Code version or Dev Container CLI version).
+      placeholder: macOS 15, Docker Desktop 4.40, VS Code 1.105 with Dev Containers 0.430
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant output from the container build or the Dev Containers log. It is formatted as code automatically.
+      render: shell
