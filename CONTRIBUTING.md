@@ -40,7 +40,9 @@ you start so we can agree on the approach.
    placeholders with test values in the copy first.
 
 6. Update [README.md](README.md) if you added a Template or changed how one
-   behaves.
+   behaves. Update the agent skill in
+   [`skills/container-templates/SKILL.md`](skills/container-templates/SKILL.md)
+   too, so coding agents know about the new Template or behaviour.
 7. Open a pull request against `main` and fill in the template.
 
 Pull requests are merged through a merge queue. Once the checks pass and the

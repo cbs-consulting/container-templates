@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "container-templates",
+  "version": "0.1.0",
+  "description": "Starts new SAP BTP projects from the cbs Dev Container Templates and helps when the container or the generator does not start.",
+  "author": {
+    "name": "cbs Corporate Business Solutions Unternehmensberatung GmbH",
+    "email": "cp_opensource@cbs-consulting.de"
+  },
+  "homepage": "https://github.com/cbs-consulting/container-templates#readme",
+  "repository": "https://github.com/cbs-consulting/container-templates",
+  "license": "Apache-2.0",
+  "keywords": ["sap", "btp", "cap", "devcontainer", "dev-container-templates"]
+}

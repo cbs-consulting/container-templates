@@ -45,6 +45,17 @@ devcontainer up --workspace-folder .
 
 Copy [`src/btp-generator/.devcontainer/`](src/btp-generator) into your project.
 
+### Option 4: Ask your coding agent
+
+This repository is also an agent plugin. Its skill teaches a coding agent to check Docker, apply a Template to an empty folder and help when the container or the generator does not start. Install it from the [cbs Agentic Marketplace](https://github.com/cbs-consulting/agentic-marketplace):
+
+```text
+/plugin marketplace add cbs-consulting/agentic-marketplace
+/plugin install container-templates@cbs-consulting
+```
+
+That is Claude Code; the marketplace README has the steps for Codex, GitHub Copilot CLI and other agents. Then ask, for example, "Start a new BTP project in a dev container". You still answer the generator's questions yourself.
+
 ## 🔁 Typical workflow
 
 ```text
@@ -59,7 +70,7 @@ When the generator finishes, your project already contains its own `devcontainer
 
 ## 🛠️ Contributing
 
-Templates live in `src/<template>/` and contain a `devcontainer-template.json` plus a `.devcontainer/` folder. Test a Template locally with `devcontainer templates apply` against a temporary folder.
+Templates live in `src/<template>/` and contain a `devcontainer-template.json` plus a `.devcontainer/` folder. The agent skill lives in `skills/container-templates/`, with the plugin manifests `plugin.json` and `.claude-plugin/plugin.json`. Test a Template locally with `devcontainer templates apply` against a temporary folder.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose a change, and follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report security problems privately as described in [SECURITY.md](SECURITY.md).
 
